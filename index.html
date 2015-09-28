@@ -98,7 +98,7 @@
 					var json = data
 					var output = json['author'][0]['family'] + 
 					' (' +
-					json['issued']['date-parts'][0] +
+					JSON.stringify(json['issued']['date-parts']).substring(2,6) +
 					') ' +
 					json['title'].italics() +
 					'. ' +
