@@ -100,9 +100,9 @@
 					' (' +
 					JSON.stringify(json['issued']['date-parts']).substring(2,6) +
 					') ' +
-					json['title'].italics() +
+					json['title'] +
 					'. ' +
-					json['publisher'] +
+					json['container-title'].italics() +
 					'. ' +
 					json['volume'] +
 					';' +
@@ -110,7 +110,7 @@
 					', ' +
 					json['page'] +
 					'. ' +
-					json['container-title'];
+					json['publisher']();
 					$("#the-field").append('<li>' + output + '</li>')
 					$('#the-field').focus();
 				
